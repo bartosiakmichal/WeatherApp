@@ -30,14 +30,13 @@ public class Main extends Application {
         Double rate1 = s.getRateFor("USD");
         Double rate2 = s.getNBPRate();
         String wikiAdress = s.getWikiDescription("Warsaw");
-        // ...
+
         System.out.println("Pogoda w postaci json:\n" + weatherJson);
         System.out.println(rate1);
         System.out.println(rate2);
         System.out.println(wikiAdress);
         System.out.println("==========GUI=============");
 
-        // część uruchamiająca GUI
         launch(args);
     }
 }

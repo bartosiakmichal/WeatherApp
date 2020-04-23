@@ -40,14 +40,6 @@ public class Controller {
     @FXML
     private TextArea PLNrateLabel;
 
-    //    @FXML
-//    private Label weatherLabel;
-//
-//    @FXML
-//    private Label currencyRateLabel;
-//
-//    @FXML
-//    private Label PLNrateLabel;
     @FXML
     private Label allertLabel;
 
@@ -75,7 +67,7 @@ public class Controller {
             weatherLabel.setText(s.jsonPrettyString(weatherJson));
             currencyRateLabel.setText("1 " + s.CurrencyCode(countryText) + " = " + String.valueOf(rate1) + " " + currencyCodeText);
             PLNrateLabel.setText("1 PLN = " + String.valueOf(rate2) + " " + s.CurrencyCode(countryText));
-        }else{
+        } else {
             allertLabel.setText("Input parameters");
         }
     }

@@ -57,14 +57,6 @@ public class Service {
             json = getUrlContent(url_city);
         }
 
-//        try (BufferedReader in = new BufferedReader(
-//                new InputStreamReader(url.openStream(), "UTF-8"))) {
-//            String line;
-//            while ((line = in.readLine()) != null) json += line;
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
         return json;
     }
 
@@ -83,13 +75,6 @@ public class Service {
         }
 
         json_currency = getUrlContent(url);
-        //        try (BufferedReader in = new BufferedReader(
-//                new InputStreamReader(url.openStream(), "UTF-8"))) {
-//            String line;
-//            while ((line = in.readLine()) != null) json_currency += line;
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
         JSONObject exchangeRates;
         try {
@@ -195,16 +180,6 @@ public class Service {
         Currency c = Currency.getInstance(new Locale("", CountryCode(country)));
         return String.valueOf(c);
     }
-//    public String CurrencyCode(String country) {
-//        Map<String, String> countries = new HashMap<>();
-//        for (String iso : Locale.getISOCountries()) {
-//            Locale l = new Locale("", iso);
-//            countries.put(l.getDisplayCountry(new Locale("en", "UK")), iso);
-//            countries.put(l.getDisplayCountry(), iso);
-//        }
-//        Currency c = Currency.getInstance(new Locale("", countries.get(country)));
-//        return String.valueOf(c);
-//    }
 
     public String jsonPrettyString(String unformattedJsonString) {
 
